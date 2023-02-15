@@ -1,0 +1,154 @@
+body {
+    background-color: #EAF6F6;
+    padding: 0;
+    margin: 0;
+    font-family: verdana, sans-serif;
+}
+
+hr {
+    border-style: none;
+    border-top-style: dotted;
+    border-color: grey;
+    border-width: 5px;
+    width: 10%;
+}
+
+h1 {
+    color: #66BFBF;
+    font-size: 40px;
+    font-family: 'Sacramento', cursive;
+}
+
+h3 {
+    color: #66BFBF;
+}
+
+.main-page-header {
+    display: flex;
+    background-color: #c9e8e8;
+    padding: 5px;
+    margin: 5px;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+}
+
+.contact_page {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding-left: 30%;
+    padding-right: 30%;
+    margin-top: 0;
+}
+
+.profile_pic {
+    border-radius: 100%;
+}
+
+.inline-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cloud {
+    opacity: 15%;
+    width: 200px;
+    height: 150px;
+    animation: pulse1 4s infinite;
+}
+
+.cloud_left {
+    padding: 25px;
+    margin-left: 200px;
+}
+
+.cloud_right {
+    padding: 70px;
+    margin-right: 300px;
+    animation-delay: 1s;
+}
+
+@keyframes pulse1 {
+    0% {
+        opacity: 15%;
+    }
+
+    50% {
+        opacity: 75%;
+    }
+
+    100% {
+        opacity: 15%;
+    }
+}
+
+.dropdown {
+    position: relative;
+    margin-left: 5px;
+}
+
+.drop-button {
+    background-color: #66BFBF;
+    color: white;
+    padding: 10px;
+    margin-top: 30px;
+    font-size: 14px;
+    border: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .drop-button {
+    background-color:  #66BFF0;
+}
+
+.first-container {
+    margin-top: 230px;
+}
+
+.container {
+    padding: 10px;
+    border-radius: 5%;
+}
+
+
+.container:hover {
+    animation: pulse2 4s infinite;
+}
+
+@keyframes pulse2 {
+    0% {
+        background-color: #EAF6F6;
+    }
+
+    50% {
+        background-color: #c9e8d0;
+    }
+
+    100% {
+        background-color: #EAF6F6;
+    }
+}
