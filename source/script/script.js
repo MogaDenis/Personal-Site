@@ -27,3 +27,18 @@ function modifyPhotosWhenScrolling()
     document.getElementById("car-photo").style.opacity = String(percentage + '%');
     document.getElementById("football-photo").style.opacity = String(percentage + '%');
 }
+
+function submitForm() 
+{
+    Swal.fire({
+        icon: 'success',
+        title: 'Thank you for your message!',
+        showConfirmButton: false,
+        timer: 1500
+    })
+
+    const form = document.getElementsByName('contact-form')[0];
+
+    form.submit();
+    form.reset();
+}

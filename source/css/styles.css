@@ -1,5 +1,9 @@
+/* TAG SELECTORS */
+
 body {
     background-color: #EAF6F6;
+    position: relative;
+    top: 250px;
     padding: 0;
     margin: 0;
     font-family: verdana, sans-serif;
@@ -23,6 +27,28 @@ h2, h3 {
     color: #66BFBF;
 }
 
+textarea {
+    resize: none;
+}
+
+input[type=button] {
+    border-radius: 10%;
+    width: 60px;
+    background-color: white;
+}
+
+input[type=button]:hover {
+    cursor: pointer; 
+    background-color: #c9c9c7;
+    transition: 0.4s ease;
+}
+
+a, a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ID SELECTORS */
 
 #header {
     display: flex;
@@ -34,11 +60,35 @@ h2, h3 {
     top: 0px;
 }
 
+/* CLASS SELECTORS */ 
+
+.container {
+    padding: 10px;
+    padding-bottom: 25px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-width: 3px;
+    border-color: #154c79;
+    border-style: solid;
+}
+
+.container:hover {
+    animation: pulse2 4s infinite;
+}
+
+.social-icon {
+    width: 6%;
+    position: relative;
+    top: 3px
+}
+
 .contact_page {
-    margin-top: 250px;
     display: flex;
     text-align: center;
-    justify-content: space-between;
+    justify-content: center;
+    padding-top: 20px;
     padding-left: 30%;
     padding-right: 30%;
 }
@@ -47,7 +97,6 @@ h2, h3 {
     border-radius: 20%;
     width: 25%;
     height: 25%;
-    display: inline-block;
     opacity: 15%;
 }
 
@@ -58,43 +107,8 @@ h2, h3 {
 
 .profile_pic {
     border-radius: 100%;
-}
-
-.inline-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.cloud {
-    opacity: 15%;
-    width: 200px;
-    height: 150px;
-    animation: pulse1 4s infinite;
-}
-
-.cloud_left {
-    padding: 25px;
-    margin-left: 200px;
-}
-
-.cloud_right {
-    padding: 70px;
-    margin-right: 300px;
-    animation-delay: 1s;
-}
-
-@keyframes pulse1 {
-    0% {
-        opacity: 15%;
-    }
-
-    50% {
-        opacity: 75%;
-    }
-
-    100% {
-        opacity: 15%;
-    }
+    /* width: 100%;
+    height: auto; */
 }
 
 .dropdown {
@@ -104,6 +118,7 @@ h2, h3 {
 
 .drop-button {
     background-color: #66BFBF;
+    width: 120px;
     color: white;
     padding: 10px;
     margin-top: 30px;
@@ -129,6 +144,7 @@ h2, h3 {
 
 .dropdown-content a:hover {
     background-color: #ddd;
+    transition: 0.4s ease;
 }
 
 .dropdown:hover .dropdown-content {
@@ -137,25 +153,7 @@ h2, h3 {
 
 .dropdown:hover .drop-button {
     background-color:  #66BFF0;
-}
-
-.first-container {
-    margin-top: 230px;
-}
-
-.container {
-    padding: 10px;
-    border-radius: 5%;
-    display: flex;
-    justify-content: center;
-}
-
-.center-text {
-    text-align: center;
-}
- 
-.container:hover {
-    animation: pulse2 4s infinite;
+    transition: 0.4s ease;
 }
 
 @keyframes pulse2 {
@@ -169,5 +167,19 @@ h2, h3 {
 
     100% {
         background-color: #EAF6F6;
+    }
+}
+
+@keyframes pulse1 {
+    0% {
+        opacity: 15%;
+    }
+
+    50% {
+        opacity: 75%;
+    }
+
+    100% {
+        opacity: 15%;
     }
 }

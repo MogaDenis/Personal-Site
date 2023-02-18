@@ -12,17 +12,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
-
-    <script src="script/script.js"></script>
+    
 </head>
 <body onscroll="modifyHeaderWhenScrolling()">
     <div id="header">
         <div class="dropdown">
-            <button class="drop-button">Dropdown Menu</button>
+            <button class="drop-button">Menu</button>
             <div class="dropdown-content">
                 <a href="index.html">About me</a>
                 <a href="contact.html">Contact</a>
-                <a href="#">Play a game made by me</a>
+                <a href="projects.html">My Projects</a>
             </div>
         </div>
 
@@ -30,7 +29,7 @@
         
         <tr>
             <td>
-                <img class="profile_pic" src="images/profile_pic.jpeg" height=150px alt="Profile picture">
+                <img class="profile_pic" src="images/profile_pic.jpeg" alt="Profile picture">
             </td>
             <td>
                 <h1>Moga Denis-Andrei</h1>
@@ -42,47 +41,57 @@
         </table>
 
     </div>
-    <div class="contact_page">
-        <div class="contact_info">
-            <h3>Contact info</h3>
-            <ul style="text-align: left;">
-                <li>Email: moga_denis@yahoo.com</li>
-                <li>Phone: 0762276281</li>
-            </ul>
-        </div>
+    <div class="container">
+        <div class="contact_page">
+            <div class="contact_info">
+                <h3>Contact info</h3>
+                <ul style="text-align: left;">
+                    <li>Email: moga_denis@yahoo.com</li>
+                    <li>Phone: 0762276281</li>
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=100082944595025" target="_blank">
+                        <img class="social-icon" src="images/facebook-icon.png"></img>Facebook</a>
+                    </li>
+                    <li><a href="https://www.instagram.com/denis_moga/" target="_blank">
+                        <img class="social-icon" src="images/instagram-icon.png"></img>Instagram</a></li>
+                </ul>
+            </div>
 
-        <div class="contact_me">
-            <h3>Contact me</h3>
+            <div class="contact_me">
+                <h3>Contact me</h3>
 
-            <form action="mailto:moga_denis@yahoo.com" enctype="text/plain" method="post">
-                <label>Your name:</label>
-                <input type="text" name="Name" id="">
+                <form name="contact-form" action="mailto:moga_denis@yahoo.com" enctype="text/plain" method="post">
+                    <label>Your name:</label>
+                    <input type="text" name="Name" id="">
 
-                <br>
+                    <br>
+                    
+                    <label>Your email:</label>
+                    <input type="email" name="Email" id="">
+
+                    <br>
+                    <br>
+
+                    <label>Your message:</label>
+
+                    <br>
+                    
+                    <textarea name="Message" id="" cols="32" rows="5"></textarea>
+
+                    <br>
                 
-                <label>Your email:</label>
-                <input type="email" name="Email" id="">
+                    <input onclick="submitForm()" type="button" value="Submit">
+                </form>
+            </div>
 
-                <br>
-                <br>
-
-                <label>Your message:</label>
-
-                <br>
-                
-                <textarea name="Message" id="" cols="32" rows="5"></textarea>
-
-                <br>
-
-                <input type="submit" name="" id="">
-            </form>
         </div>
 
     </div>
-    
-    <!-- <div class="inline-container">
-        <img class="cloud cloud_left" src="images/cloud.png" alt="Cloud image">
-        <img class="cloud cloud_right" src="images/cloud.png" alt="Cloud image">
-    </div> -->
+<!-- 
+    <hr> -->
+
+    <script src="script/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 </html>
