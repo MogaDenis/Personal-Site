@@ -21,10 +21,16 @@ h1 {
     color: #66BFBF;
     font-size: 40px;
     font-family: 'Sacramento', cursive;
+    padding: 0;
+    margin: 0;
 }
 
 h2, h3 {
     color: #66BFBF;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2%;
+    
 }
 
 textarea {
@@ -63,8 +69,8 @@ a, a:visited {
 /* CLASS SELECTORS */ 
 
 .container {
-    padding: 10px;
-    padding-bottom: 25px;
+    padding: 25px;
+    /* padding-bottom: 25px; */
     border-radius: 18px;
     display: flex;
     flex-direction: column;
@@ -88,9 +94,28 @@ a, a:visited {
     display: flex;
     text-align: center;
     justify-content: center;
-    padding-top: 20px;
     padding-left: 30%;
     padding-right: 30%;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    padding-right: 5%;
+}
+
+.project-image {
+    position: relative;
+    right: 5%;
+    width: 30%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: auto;
+    border-color: black;
+    border-style: solid;
+    border-radius: 18px;
 }
 
 .hobby-photo {

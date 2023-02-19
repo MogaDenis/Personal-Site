@@ -34,6 +34,7 @@ function submitForm()
         icon: 'success',
         title: 'Thank you for your message!',
         showConfirmButton: false,
+        background: '#c9e8e8',
         timer: 1500
     })
 
