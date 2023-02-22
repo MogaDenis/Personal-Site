@@ -13,6 +13,10 @@ body {
     font-family: verdana, sans-serif;
 }
 
+li {
+    margin: 8px;
+}
+
 hr {
     border-style: none;
     border-top-style: dotted;
@@ -39,18 +43,33 @@ h2, h3 {
 
 textarea {
     resize: none;
+    border-radius: 18px;
+    border-style: solid;
+    border-color: #154c79;
+    border-width: 3px;
+    padding: 10px;
+    margin: 5px;
 }
 
 input[type=button] {
-    border-radius: 10%;
+    border-radius: 18px;
     width: 60px;
     background-color: white;
 }
 
 input[type=button]:hover {
     cursor: pointer; 
-    background-color: #c9c9c7;
+    background-color: #c9e8e8;
     transition: 0.4s ease;
+}
+
+input[type=text], input[type=email] {
+    border-radius: 18px;
+    border-style: solid;
+    border-color: #154c79;
+    border-width: 3px;
+    padding: 5px;
+    margin: 2px;
 }
 
 a, a:visited {
@@ -78,56 +97,53 @@ a, a:visited {
     border-radius: 18px;
 }
 
-#car-photo:hover {
-    width: 26%;
-    height: 26%;
-    transition: 0.4s ease;
-}
-
-#coding-photo:hover {
-    width: 26%;
-    height: 26%;
-    transition: 0.4s ease;
-}
-
-#football-photo:hover {
-    width: 26%;
-    height: 26%;
-    transition: 0.4s ease;
-}
-
 /* CLASS SELECTORS */ 
 
 .container {
     padding: 25px;
-    /* padding-bottom: 25px; */
     border-radius: 18px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-width: 3px;
     width: 96%;
+    height: auto;
     border-color: #154c79;
     border-style: solid;
     background-color: #EAF6F6;
 }
 
 .container:hover {
-    animation: pulse2 4s infinite;
+    animation: pulse 4s infinite;
+}
+
+.container:hover .project-image {
+    width: 32%;
+    right: 6%;
+    transition: 0.4s ease;
+}
+
+.container:hover .hobby-photo {
+    bottom: 10%;
+    width: 27%;
+    height: 27%;
+    transition: 0.4s ease;
 }
 
 .social-icon {
-    width: 6%;
+    width: 20px;
+    padding-right: 5px;
     position: relative;
-    top: 3px
+    top: 3px;
+    border-radius: 5px;
 }
 
-.contact_page {
+.contact-page {
     display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    align-items: center;
     text-align: center;
-    justify-content: center;
-    padding-left: 30%;
-    padding-right: 30%;
 }
 
 .project {
@@ -152,12 +168,6 @@ a, a:visited {
     transition: 0.4s ease;
 }
 
-.project-image:hover {
-    width: 32%;
-    right: 6%;
-    transition: 0.4s ease;
-}
-
 .hobby-photo {
     border-radius: 20%;
     width: 25%;
@@ -173,8 +183,6 @@ a, a:visited {
 
 .profile_pic {
     border-radius: 100%;
-    /* width: 100%;
-    height: auto; */
 }
 
 .dropdown {
@@ -225,7 +233,7 @@ a, a:visited {
     transition: 0.4s ease;
 }
 
-@keyframes pulse2 {
+@keyframes pulse {
     0% {
         background-color: #EAF6F6;
     }
@@ -236,19 +244,5 @@ a, a:visited {
 
     100% {
         background-color: #EAF6F6;
-    }
-}
-
-@keyframes pulse1 {
-    0% {
-        opacity: 15%;
-    }
-
-    50% {
-        opacity: 75%;
-    }
-
-    100% {
-        opacity: 15%;
     }
 }
