@@ -1,6 +1,6 @@
 function modifyHeaderWhenScrolling()
 {
-    let percentage = 100 - document.documentElement.scrollTop * 0.6;
+    let percentage = 100 - document.documentElement.scrollTop * 0.5;
     
     document.getElementById("header").style.opacity = String(percentage + '%');
 
@@ -43,3 +43,12 @@ function submitForm()
     form.submit();
     form.reset();
 }
+
+function moveElementsBelowHeader()
+{
+    const topPadding = document.getElementById('header').offsetHeight + 2;
+    document.querySelector('body').style.top = String(topPadding + 'px');
+    console.log(document.getElementById('header').offsetHeight);
+}
+
+window.onload = moveElementsBelowHeader();

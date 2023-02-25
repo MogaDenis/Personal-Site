@@ -7,7 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 250px;
+    top: 0;
     padding: 0;
     margin: 0;
     font-family: verdana, sans-serif;
@@ -27,7 +27,7 @@ hr {
 
 h1 {
     color: #66BFBF;
-    font-size: 40px;
+    font-size: 34px;
     font-family: 'Sacramento', cursive;
     padding: 0;
     margin: 0;
@@ -55,6 +55,9 @@ input[type=button] {
     border-radius: 18px;
     width: 60px;
     background-color: white;
+    font-family: verdana, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
 }
 
 input[type=button]:hover {
@@ -75,6 +78,7 @@ input[type=text], input[type=email] {
 a, a:visited {
     color: inherit;
     text-decoration: none;
+
 }
 
 /* ID SELECTORS */
@@ -87,14 +91,19 @@ a, a:visited {
     padding-right: 25px;
     padding-top: 5px;
     padding-bottom: 5px;
-    margin: 5px;
     position: fixed;
     width: 96%;
+    min-height: 30vh;
     border-color: #154c79;
     border-style: solid;
     border-width: 3px;
     top: 0px;
     border-radius: 18px;
+}
+
+#profile-image {
+    border-radius: 100%;
+    max-width: 30vw;
 }
 
 /* CLASS SELECTORS */ 
@@ -111,31 +120,33 @@ a, a:visited {
     border-color: #154c79;
     border-style: solid;
     background-color: #EAF6F6;
+    transition: 0.6s ease;
 }
 
 .container:hover {
-    animation: pulse 4s infinite;
+    background-color: #c9e8d0;
+    transition: 0.6s ease;
 }
 
 .container:hover .project-image {
     width: 32%;
     right: 6%;
-    transition: 0.4s ease;
+    transition: 0.6s ease;
 }
 
 .container:hover .hobby-photo {
     bottom: 10%;
     width: 27%;
     height: 27%;
-    transition: 0.4s ease;
+    transition: 0.6s ease;
 }
 
 .social-icon {
     width: 20px;
-    padding-right: 5px;
+    border-radius: 5px;
+    margin-right: 5px;
     position: relative;
     top: 3px;
-    border-radius: 5px;
 }
 
 .contact-page {
@@ -159,13 +170,13 @@ a, a:visited {
     position: relative;
     right: 5%;
     width: 30%;
+    height: auto;
     margin-left: 5%;
     margin-right: 5%;
-    height: auto;
     border-color: black;
     border-style: solid;
     border-radius: 18px;
-    transition: 0.4s ease;
+    transition: 0.6s ease;
 }
 
 .hobby-photo {
@@ -173,7 +184,7 @@ a, a:visited {
     width: 25%;
     height: 25%;
     opacity: 15%;
-    transition: 0.4s ease;
+    transition: 0.6s ease;
 }
 
 .hobbies-photos {
@@ -181,9 +192,7 @@ a, a:visited {
     justify-content: space-around; 
 }
 
-.profile_pic {
-    border-radius: 100%;
-}
+/* Drop-down menu */
 
 .dropdown {
     position: relative;
@@ -193,7 +202,7 @@ a, a:visited {
 .drop-button {
     border-radius: 18px;
     background-color: #66BFBF;
-    width: 120px;
+    min-width: 8vw;
     color: white;
     padding: 10px;
     margin-top: 30px;
@@ -206,7 +215,7 @@ a, a:visited {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: 120px;
+    min-width: 8vw;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
@@ -231,18 +240,4 @@ a, a:visited {
 .dropdown:hover .drop-button {
     background-color:  #66BFF0;
     transition: 0.4s ease;
-}
-
-@keyframes pulse {
-    0% {
-        background-color: #EAF6F6;
-    }
-
-    50% {
-        background-color: #c9e8d0;
-    }
-
-    100% {
-        background-color: #EAF6F6;
-    }
 }
