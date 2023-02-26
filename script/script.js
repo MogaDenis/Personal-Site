@@ -1,7 +1,6 @@
-function modifyHeaderWhenScrolling()
-{
+function modifyHeaderWhenScrolling() {
     let percentage = 100 - document.documentElement.scrollTop * 0.5;
-    
+
     document.getElementById("header").style.opacity = String(percentage + '%');
 
     if (document.documentElement.scrollTop > 100)
@@ -10,8 +9,7 @@ function modifyHeaderWhenScrolling()
         document.getElementById("header").style.pointerEvents = 'all';
 }
 
-function modifyPhotosWhenScrolling()
-{
+function modifyPhotosWhenScrolling() {
     let percentage = 0;
 
     if (document.documentElement.scrollTop >= 200 && document.documentElement.scrollTop <= 400)
@@ -20,16 +18,15 @@ function modifyPhotosWhenScrolling()
         percentage = (document.documentElement.scrollTop + 15) * 0.5;
     else if (document.documentElement.scrollTop > 400)
         percentage = 100 - (document.documentElement.scrollTop - 385) * 0.5;
-        if (percentage < 15)
-            percentage = 15;
+    if (percentage < 15)
+        percentage = 15;
 
     document.getElementById("coding-photo").style.opacity = String(percentage + '%');
     document.getElementById("car-photo").style.opacity = String(percentage + '%');
     document.getElementById("football-photo").style.opacity = String(percentage + '%');
 }
 
-function submitForm() 
-{
+function submitForm() {
     Swal.fire({
         icon: 'success',
         title: 'Thank you for your message!',
@@ -44,11 +41,11 @@ function submitForm()
     form.reset();
 }
 
-function moveElementsBelowHeader()
-{
+function moveElementsBelowHeader() {
     const topPadding = document.getElementById('header').offsetHeight + 2;
     document.querySelector('body').style.top = String(topPadding + 'px');
     console.log(document.getElementById('header').offsetHeight);
 }
 
+window.onresize = moveElementsBelowHeader();
 window.onload = moveElementsBelowHeader();
