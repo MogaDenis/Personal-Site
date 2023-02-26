@@ -47,5 +47,5 @@ function moveElementsBelowHeader() {
     console.log(document.getElementById('header').offsetHeight);
 }
 
-window.onresize = moveElementsBelowHeader();
-window.onload = moveElementsBelowHeader();
+window.onresize = moveElementsBelowHeader;
+window.onload = moveElementsBelowHeader;
