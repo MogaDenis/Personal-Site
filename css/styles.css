@@ -103,6 +103,7 @@ a, a:visited {
     border-width: 3px;
     top: 0px;
     border-radius: 18px;
+    z-index: 1;
 }
 
 #profile-image {
